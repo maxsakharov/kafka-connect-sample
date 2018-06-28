@@ -1,9 +1,9 @@
 ### Why?
 
 This is a sample project which shows how Kafka Connect works on example of the kafka-connect-rest plugin. 
-Using that project you start kafka ecosystem locally. 
+Using that project you can start kafka ecosystem locally. 
  
-Making changes to the config/config.json you can see how kafka-connect-rest plugin works.
+Making changes to the `config/config.json` you can see how kafka-connect-rest plugin works.
 
 ### Kafka Connect
 
@@ -26,7 +26,7 @@ docker-compose up -d
 
 Step 3. Deploy TestMessage connector
 ```
-cd config/
+cd ../config/
 KAFKA_CONNECT_HOST=localhost:8083 CONNECTOR_NAME=TestMessage ./publish.sh
 ```
 
@@ -68,7 +68,7 @@ rest.sink.payload.remove - String contains comma separated list of payload field
 rest.sink.payload.add - String contains comma separated list of fields to be added to the payload. Interpolation accepted
 rest.http.connection.connection.timeout - HTTP connection timeout in milliseconds, default is 2000
 rest.http.connection.read.timeout - HTTP read timeout in milliseconds, default is 2000
-rest.http.connection.keep.alive.ms - For how long keep HTTP connection should be keept alive in milliseconds, default is 30000 (5 minutes)
+rest.http.connection.keep.alive.ms - For how long HTTP connection should be keept alive in milliseconds, default is 30000 (5 minutes)
 rest.http.connection.max.idle - How many idle connections per host can be kept opened, default is 5
 rest.http.max.retries - Number of times to retry request in case of failure. Negative means infinite number of retries, default is -1
 rest.http.codes.whitelist - Regex for HTTP codes which are considered as successful. Request will be retried infinitely if response code from the server does not match the regex. Default value is ^[2-4]{1}\\d{1}\\d{1}$
@@ -78,6 +78,8 @@ rest.sink.retry.backoff.ms - The retry backoff in milliseconds. In case of faile
 ```
 
 ### Resources:
+[Kafka Official Website](https://kafka.apache.org/)
+
 [Kafka Connect Official Documentation](https://docs.confluent.io/current/connect/intro.html)
 
-[Kafka Connect Connectors Documentation](https://docs.confluent.io/current/connect/intro.html)
+[Kafka Connect Connectors](https://www.confluent.io/product/connectors/)
