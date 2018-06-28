@@ -1,0 +1,19 @@
+{
+  "name": "TestMessage",
+  "config": {
+    "connector.class": "com.tm.kafka.connect.rest.RestSinkConnector",
+    "rest.sink.payload.converter.class": "com.tm.kafka.connect.rest.converter.sink.SinkJSONPayloadConverter",
+    "rest.sink.method": "POST",
+    "tasks.max": "1",
+    "topics": "test-topic",
+    "name": "TestMessage",
+    "rest.sink.headers": "Content-Type:application/json",
+    "rest.sink.payload.remove": "url_param",
+    "rest.sink.payload.replace": "sensitive_data:XXX",
+    "rest.sink.payload.add": "processed_at:${util:timestamp}",
+    "rest.http.max.retries": 5,
+    "rest.http.codes.blacklist": "5[0]{2}",
+    "rest.sink.retry.backoff.ms": 3000,
+    "rest.sink.url": "https://postman-echo.com/post?foo1=bar1&foo2=bar2&from_the_payload=${payload:url_param}"
+  }
+}

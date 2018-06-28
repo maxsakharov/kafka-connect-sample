@@ -1,0 +1,14 @@
+# IntelliJ data
+*.iml
+.idea/
+.ipr
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Docker
+
+docker-generated/
+lib/

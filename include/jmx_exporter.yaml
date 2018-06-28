@@ -1,0 +1,12 @@
+lowercaseOutputName: false
+rules:
+  - pattern: kafka.connect<type=connect-node-metrics, client-id=(.+), node-id=(.+)><>([a-zA-Z-]+)
+  - pattern: kafka.connect<type=connect-coordinator-metrics, client-id=(.+)><>([a-zA-Z-]+)
+  - pattern: kafka.consumer<type=consumer-node-metrics, client-id=(.+), node-id=(.+)><>([a-zA-Z-]+)
+  - pattern: kafka.consumer<type=consumer-fetch-manager-metrics, client-id=(.+)><>(.+)
+  - pattern: kafka.producer<type=producer-topic-metrics, client-id=(.+), topic=(.+)><>([a-zA-Z-]+)
+  - pattern: kafka.producer<type=producer-node-metrics, client-id=(.+), node-id=(.+)><>([a-zA-Z-]+)
+  - pattern: kafka.connect<type=sink-task-metrics, connector=(.+), task=(.+)><>([a-zA-Z-]+)
+  - pattern: kafka.log<type=Log, name=(.+), topic=(.+), partition=(.+)><>Value
+  - pattern: metrics<name=(.+)><>([a-zA-Z-]+)
+  - pattern: java.lang<type=(.+)><>([a-zA-Z-]+)

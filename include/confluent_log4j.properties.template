@@ -1,0 +1,14 @@
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d %5p %t [%c] - %m%n
+
+log4j.appender.rollingFileAppender=org.apache.log4j.RollingFileAppender
+log4j.appender.rollingFileAppender.MaxFileSize=100MB
+log4j.appender.rollingFileAppender.MaxBackupIndex=3
+log4j.appender.rollingFileAppender.File=/logs/kafka-connect.log
+log4j.appender.rollingFileAppender.layout=org.apache.log4j.PatternLayout
+log4j.appender.rollingFileAppender.layout.ConversionPattern=%d %5p %t [%c] - %m%n
+
+# class specific logging
+log4j.logger.com.tm.kafka.connect.rest.RestSinkTask=INFO
+log4j.rootLogger=ERROR, stdout, rollingFileAppender
