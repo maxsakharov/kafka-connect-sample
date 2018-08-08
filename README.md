@@ -26,7 +26,7 @@ docker-compose up -d
 
 Step 3. Deploy TestMessage connector
 ```
-cd ../config/
+cd config/
 KAFKA_CONNECT_HOST=localhost:8083 CONNECTOR_NAME=TestMessage ./publish.sh
 ```
 

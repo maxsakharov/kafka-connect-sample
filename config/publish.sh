@@ -62,6 +62,6 @@ else
         cat /tmp/curl-out
         exit 1
     else
-         echo "Successfully update";
+         echo "Successfully updated";
     fi;
 fi;
